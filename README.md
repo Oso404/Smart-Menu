@@ -1,7 +1,5 @@
 # Smart Restaurant Menu Assistant
 
-![Full-Stack AI](https://img.shields.io/badge/Full-Stack-AI-blue)
-
 ## Description
 
 AI-powered full-stack restaurant menu assistant. Restaurant owners can upload menus (PDF/image), automatically parsed by a Python AI microservice into structured dishes. Customers can browse menus and interact with an AI-powered chat to ask questions about menu items.
