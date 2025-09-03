@@ -1,0 +1,49 @@
+API Design and Architecture
+Application Programming Interface
+-allows us to build applications to talk to each other
+e.g.
+-an app can have users GET data, DELETE data, this idea 
+is known as an Interface
+-another app is allowed to talk to first app because first app has an API
+e.g.
+-frontend and backend programs can communicate via application
+-overall 
+
+Types of APIs
+REST
+- uses http and sends data in json format
+- utilizes GET,POST,PUT,DELETE,PATCH each corresponding to a different action on a resource
+SOAP
+- alternative to REST
+- not really used as much as REST
+- instead of json uses XML messages
+GraphQL
+- interact with backend
+- instead of exposing multiple endpoints it has one single endpoint
+- there are two kinds of operations: queries and mutatios
+- queries are for fetching/reading data whereas mutations are for modifying data
+WebSocket
+- bidirectional communication where frontend can talk to backend and vice versa
+- connection is maintained 
+
+
+RESTful APIs
+-http methods
+-endpoints
+-http responses
+-json data
+
+REST API methods
+GET - retrieve data from server
+e.g.
+youtube comments 
+the backend stores the comments/data in db
+we make a request to view the comments (GET)
+the backend sends data in json format to frontend
+now suppose we write a comment it and want to post it (POST) we utilize different http method
+
+Endpoint 
+= method + path (where path is URL)
+GET /posts/{id}/comments (all post commments)
+POST /posts/{id}/comments (add a comment)
+
