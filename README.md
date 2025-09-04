@@ -27,42 +27,60 @@ AI-powered full-stack restaurant menu assistant. Restaurant owners can upload me
 
 ---
 
-## Detailed Roadmap
+## 7-Week Roadmap
 
-### Week 1 – Node.js + Express + PostgreSQL + JWT (15 hrs)
+### Week 1 – Environment Setup & Backend Basics (15 hrs)
 
-* Day 1: Setup Node.js, Express server, test route
-* Day 2: PostgreSQL setup, create `users` and `restaurants` tables, Prisma init
-* Day 3: Implement `/register` & `/login` endpoints with JWT auth
-* Day 4: Test auth with Postman, protect sample route
-* Day 5: Create restaurant routes (`POST /restaurants`, `GET /restaurants/:id`)
-* Day 6: Setup React frontend, login/register forms, store JWT
+* Install Node.js, PostgreSQL, Python, and required libraries
+* Set up GitHub repo with backend/frontend/python folders
+* Build basic Express server with one test route
+* Explore REST APIs, JSON, HTTP methods (GET, POST, etc.)
 
-### Week 2 – Menu Upload + AWS S3 (15 hrs)
+### Week 2 – Database & Authentication (15 hrs)
 
-* Day 1: AWS S3 setup, IAM keys
-* Day 2: Upload route using Multer & aws-sdk, store `s3_url` in DB
-* Day 3: List menus (`GET /restaurants/:id/menus`), integrate frontend
-* Day 4: React file upload form, Axios POST
-* Day 5: Test multiple uploads, check S3 & DB
-* Day 6: Cleanup, error handling, Tailwind styling
+* Create database with `users` and `restaurants` tables
+* Add `/register` and `/login` routes with bcrypt password hashing
+* Implement JWT middleware for protected routes
+* Test routes with Postman, document API endpoints
 
-### Week 3 – Python AI Microservice (15 hrs)
+### Week 3 – React Frontend Basics (15 hrs)
 
-* Day 1: Python & FastAPI setup, basic route
-* Day 2: `/parseMenu` endpoint accepting S3 URL, return dummy JSON
-* Day 3: Download file from S3, extract text (PyPDF2/pytesseract)
-* Day 4: Call OpenAI API, parse menu into structured JSON
-* Day 5: Node calls Python service, insert JSON into `menu_items`
-* Day 6: Display structured menu in React, test full flow
+* Initialize React project with Vite + TailwindCSS
+* Build Login/Register forms, connect to backend APIs
+* Store JWT in local storage, redirect after login
+* Add basic navigation: Home, Login, Register pages
 
-### Week 4 – AI Q\&A + Polish + Deploy (15 hrs)
+### Week 4 – Menu Upload + AWS S3 Integration (15 hrs)
 
-* Day 1: Generate OpenAI embeddings for menu items, store in pgvector
-* Day 2-3: AI chat endpoint: question → similarity search → GPT response
-* Day 4: React chat UI, send question, display AI answer
-* Day 5: Role-based auth, error handling, JWT refresh (optional)
-* Day 6: Deployment: Node.js & Python services, frontend, DB, test full flow
+* Set up AWS S3 bucket and IAM credentials
+* Build file upload endpoint with Multer + aws-sdk
+* Save S3 URL in database for each menu
+* Build React file upload form connected to backend
+* Test end-to-end: frontend → backend → S3 → DB
+
+### Week 5 – Python AI Microservice (15 hrs)
+
+* Set up FastAPI project with basic `/parseMenu` endpoint
+* Add code to fetch menu files from S3
+* Use PyPDF2/pytesseract to extract text from PDFs/images
+* Send text to OpenAI API → parse into structured menu JSON
+* Send structured menu data back to Node.js → store in DB
+
+### Week 6 – AI Q\&A Chat Feature (15 hrs)
+
+* Generate embeddings for menu items, store in pgvector/PostgreSQL
+* Create Q\&A endpoint: question → similarity search → GPT answer
+* Build simple React chat UI for customers
+* Connect frontend → backend → AI Q\&A pipeline
+
+### Week 7 – Testing, Deployment & Polish (15 hrs)
+
+* Add role-based auth (owners vs customers)
+* Test full flow: Register → Upload → Parse → Browse → Q\&A
+* Deploy backend (Node.js + Python) on Render/AWS EC2
+* Deploy frontend on Vercel/Netlify
+* Deploy DB on AWS RDS or Supabase
+* Write README with screenshots & final documentation
 
 ---
 
